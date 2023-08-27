@@ -1,0 +1,174 @@
+.wrapper, .footer {
+    position: relative;
+    width: 95vw;
+    max-width: 950px;
+    min-width: 750px;
+}
+
+#wrapper-head #warning {
+    font: italic 14px 'Rubik Wet Paint', sans-serif;
+    color: red;
+    text-align: center;
+    border: 1px solid red;
+    background-color: #eaa8a8;
+    opacity: 0.4;
+    margin-bottom: 1px;
+}
+
+#wrapper-head {
+    margin-bottom: 20px;
+}
+
+#wrapper-head, #wrapper-head img {
+    width: 100%;
+}
+
+#button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#upload-button, #exit-button {
+    display: flex;
+    font: 16px 'Rubik Wet Paint', cursive;
+    margin: 0 30px;
+    color: #373737;
+    background-color: #abb3b9;
+    border-color: gray;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+    width: 150px;
+    min-height: 25px;
+}
+
+#upload-button {
+    margin-right: auto;
+}
+
+#exit-button {
+    margin-left: auto;
+}
+
+#upload-text, #exit-text {
+    font-family: 'Rubik Wet Paint', cursive;
+    margin: 0 auto;
+}
+
+#upload-icon, #exit-icon {
+    width: 20px;
+}
+
+#used-memory {
+    margin: 10px 30px 0 auto;
+    text-align: right;
+    position: relative;
+}
+
+#files-table {
+    position: relative;
+    font-family: 'Rubik Wet Paint', cursive;
+    border-collapse: collapse;
+    width: 94%;
+    margin: 10px auto;
+    table-layout: fixed;
+}
+#input-form{
+    position: relative;
+}
+tr {
+    font-style: italic;
+}
+
+.filename, .filename_header, .size, .date, .icons {
+    position: relative;
+    vertical-align: middle;
+    border-bottom: 1px solid #919191;
+    font-size: 16px;
+    height: 40px;
+    opacity: 0.75;
+    font-family: sans-serif;
+
+}
+
+.filename, .filename_header {
+    overflow: hidden;
+    text-overflow: ellipsis; /* Опционально: для обрезания текста, если ячейка содержит слишком много текста */
+    white-space: nowrap; /* Опционально: для предотвращения переноса текста на новую строку */
+    /*width: 49%;*/
+    text-align: left;
+}
+
+.filename span:hover {
+    color: blue; /* Изменение цвета при наведении */
+    cursor: pointer; /* Изменение курсора на указатель */
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+.filename span{
+    position: relative;
+}
+
+.size {
+    width: 10%;
+    text-align: right;
+}
+
+.date {
+    width: 10%;
+    text-align: right;
+}
+
+.icons {
+    width: 11%;
+    max-width: 40px;
+}
+
+#download-icon, #rename-icon, #delete-icon, #upload-button, #exit-button {
+    cursor: pointer;
+    transition: filter 0.3s ease;
+    opacity: 0.75;
+}
+
+#download-icon, #rename-icon, #delete-icon {
+    margin: 5px;
+    width: 20px;
+}
+
+
+
+@media (max-width: 800px) {
+    .wrapper, .footer {
+        min-width: 200px;
+        width: 95vw;
+    }
+
+    #upload-button, #exit-button {
+        margin: 0 10px;
+    }
+
+    #used-memory {
+        margin-right: 10px;
+    }
+
+    #download-icon, #rename-icon, #delete-icon {
+        margin: 1px;
+    }
+
+    .filename, .filename_header {
+        width: 35%;
+    }
+
+    .filename, .filename_header, .size, .date, .icons {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .size, .date {
+        display: none;
+    }
+}
+
+
+
+

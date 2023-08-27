@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cloud Storage Home</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/home.css" type="text/css">
+    <link rel="stylesheet" href="css/confirm.css" type="text/css">
+</head>
+<body>
+<div class="wrapper">
+    <div id="wrapper-head">
+    <p id="warning">ВНИМАНИЕ!!!<br>
+        Данное хранилище представлено
+        исключительно в демонстрационных целях!!!
+        Администрация сайта не несет
+        ответственности за конфиденциальность и длительное хранение данных!!!
+        Ограничения касаются исключительно
+        представленной ДЕМО-версии!!!
+    </p>
+        <img src="images/logo-landscape.svg" alt="">
+    </div>
+
+    <div id="button-container">
+        <button id="upload-button" class="invertible">
+            <img src="./images/icons/upload.svg" id="upload-icon" title="Upload file" alt="upload icon">
+            <span id="upload-text">Upload file</span>
+        </button>
+        <button id="exit-button" class="invertible">
+            <span id="exit-text">Exit</span>
+            <img src="./images/icons/exit.svg" id="exit-icon" title="Exit" alt="exit icon">
+        </button>
+    </div>
+    <p id="used-memory-bytes"></p>
+    <p id="used-memory"></p>
+    <table id="files-table" ></table>
+</div>
+<footer class="footer">
+    <p class="contacts">Contact: mslfox.reg@gmail.com</p>
+    <p class="produced">&copyProduced by MSLFOX&trade;</p>
+</footer>
+<script src="js/env.js"></script>
+<script src="js/confirm.js"></script>
+<script src="js/spinner.js"></script>
+<script src="js/token.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

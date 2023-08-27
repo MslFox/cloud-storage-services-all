@@ -1,0 +1,45 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+/dXBsb2FkU3RvcmFnZS8=/
+/_README/
+/.mvn/
+/mvnw
+/mvnw.cmd
+/uploadStorage/
+/src/main/java/com/mslfox/cloudStorageServices/_future_mayBe/
+/changelog/
+/netology-diplom-frontend/
+/.gitignore
+/src/main/java/com/mslfox/cloudStorageServices/__JKHJK/
+/src/main/java/com/mslfox/cloudStorageServices/repository/file/YandexDisk/

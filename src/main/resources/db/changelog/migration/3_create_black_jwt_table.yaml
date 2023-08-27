@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-black_jwt-table
+      author: Mihail Lisin
+      changes:
+        - createTable:
+            tableName: black_jwt
+            columns:
+              - column:
+                  name: token
+                  type: VARCHAR(300)
+                constraints:
+                    nullable: true
+              - column:
+                 name: expiration
+                 type: BIGINT
+                constraints:
+                    primaryKey: true
+                    nullable: true

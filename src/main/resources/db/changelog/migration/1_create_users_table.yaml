@@ -1,0 +1,54 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-users_table
+      author: Mihail Lisin
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: username
+                  type: VARCHAR(255)
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: account_non_expired
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: account_non_locked
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+              - column:
+                  name: credentials_non_expired
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+              - column:
+                  name: enabled
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+            indexes:
+              - index:
+                  name: username_idx
+                  tableName: users
+                  columns:
+                    - column:
+                        name: username
+                        ascending: true

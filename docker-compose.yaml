@@ -1,0 +1,55 @@
+services:
+  # cloud-storage-api
+  cloud-storage-service:
+    # for http protocol
+    # container_name: https-api
+    container_name: http-api
+    build: ./
+    image: mslfoxdocker/cloud-storage-api
+    # docker pull mslfoxdocker/cloud-storage-api
+    restart: always
+    environment:
+      spring_datasource_url: jdbc:postgresql://db-postgres:5432/postgres
+      file_system_storage_location: /uploadStorage
+      server_port: 80
+      server_ssl_enabled: false
+      server_ssl_key-store: none
+      server_ssl_key-store-password: none
+      server_ssl_key-store-type: none
+      server_ssl_key-password: none
+      #      server_ssl_key-store: classpath:keystore/ca.p12
+      #      server_ssl_key-store-password: ca_password
+      #      server_ssl_key-store-type: pkcs12
+      #      server_ssl_key-password: ca_password
+      # for http/https - uncomment/comment out lines below
+    ports:
+      # https
+#      - "443:443"
+      # http
+     - "80:80"
+    volumes:
+      #for Linux      - path to local storage:/uploadStorage
+      # for Win       - path to local storage:/uploadStorage
+      - D:/uploadStorage:/uploadStorage
+    depends_on:
+      - db-postgres
+  db-postgres:
+    container_name: db-postgres
+    image: postgres:15.1
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+volumes:
+  pgdata:
+    driver: local
+    driver_opts:
+      type: none
+      #for Linux      device: /data/pgData
+      # for Win       device: D:/VolumePostgres/data/pgData
+      device: D:/VolumePostgres/data/pgData
+      o: bind

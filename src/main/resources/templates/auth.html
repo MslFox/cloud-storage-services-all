@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cloud Storage Authorization</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/auth.css" type="text/css">
+</head>
+
+
+
+<body>
+<script src="js/env.js"></script>
+<script>
+    let current_token =localStorage.getItem(localStorageTokenKey);
+    if (current_token && current_token.startsWith('Bearer ')  ) {
+         window.location.href = './home.html';
+    }
+</script>
+<div class="wrapper">
+    <div id="develop-info" >
+        <p><a id="openApiLink" href="#">OpenApi Документация API:</a> Здесь вы найдете описание REST API с примерами запросов и ответов.</p>
+    </div>
+    <div id="wrapper-head">
+        <a href="auth.html"> <img src="images/logo-vert.svg" alt=""></a>
+    </div>
+    <form id="input-form">
+        <label class="input-label" for="email">e-mail</label>
+        <input type="email" placeholder="Enter email" id="email" >
+        <label class="input-label" for="password">password</label>
+        <input type="password" placeholder="Enter password" id="password">
+        <div id="show-password">
+            <input type="checkbox" id="show" onchange="togglePasswordVisibility()">
+            <label for="show">show password</label>
+        </div>
+        <button type="submit" id="submit-button">Sign in/Sign up</button>
+    </form>
+</div>
+<footer class="footer">
+    <p class="contacts">Contact: mslfox.reg@gmail.com</p>
+    <p class="produce">&copyProduced by MSLFOX&trade;</p>
+</footer>
+<script src="js/token.js"></script>
+<script src="js/spinner.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

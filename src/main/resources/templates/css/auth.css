@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap');
+
+.wrapper, .footer {
+    max-width: 550px;
+    min-width: 300px;
+}
+#develop-info{
+    color: green;
+    background-color: #84a184;
+}
+#develop-info p{
+    font: 16px Arial,serif ;
+    text-align: center;
+}
+#wrapper-head img {
+    margin: 5px auto;
+    width: 270px;
+}
+
+#head-label {
+    font-size: 60px;
+    margin: 3% auto 5% auto;
+}
+
+.input-label {
+    display: block;
+    margin: 1% auto;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+#show-password {
+    display: block;
+    margin: 1% auto;
+    border-radius: 10px;
+}
+
+#email::placeholder, #password::placeholder {
+    text-align: center;
+    font-size: 18px;
+}
+#email, #password{
+    width: 290px;
+    height: 25px;
+    border-radius: 10px;
+    border-color: gray;
+    background-color: #abb3b9;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+}
+#email:focus, #password:focus {
+    background-color: white;
+    font-size: 18px;
+    outline: none;
+}
+#show-password label {
+    display: inline;
+    font-size: 20px;
+}
+
+#submit-button {
+    margin: 2% auto;
+    font: 30px 'Rubik Wet Paint', cursive;
+    color: #373737;
+    background-color: #abb3b9;
+    border-color: gray;
+    border-radius: 10px;
+    width: 290px;
+    height: 50px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
+}
+#submit-button:hover {
+    background-color: #919191;
+}
+
+input[type="password"]:invalid, input[type="email"]:invalid {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    font: 14px Arial;
+}
+
+@media (max-width: 600px) {
+    #head-label {
+        font-size: 40px;
+    }
+    #show-password label {
+        font-size: 15px;
+    }
+    .input-label {
+        font-size: 25px;
+    }
+    #submit-button {
+        font: 25px 'Rubik Wet Paint', cursive;
+    }
+}
+
+
+
+
+
